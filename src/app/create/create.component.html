@@ -1,0 +1,8 @@
+<div class="md-form">
+    <form>
+        <a class="prefix">
+          <i class="fa fa-plus prefix" color="primary" (click)="addTodo()"></i>
+        </a>
+      <input mdbActive type="text" class="form-control" placeholder="Add new task" [(ngModel)]="newTodo" (keyup.enter)="addTodo()" name="addNew">
+    </form>
+  </div>

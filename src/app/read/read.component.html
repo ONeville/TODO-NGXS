@@ -1,0 +1,12 @@
+
+<div class="form-group full-width" *ngIf="todos$">
+    <form class="full-width">
+      <div *ngFor="let todo of todos$ | async">
+        <input type="checkbox" id="{{todo.id}}" (click)="toggleTodoComplete(todo)" [checked]="todo.complete" class="mr-3">
+        <label for="{{todo.id}}" [ngClass]="{'strikethrough' : todo.complete}">{{todo.title}}</label>
+        <button type="button" class="close" aria-label="Close" style="float: right;" (click)="removeTodo(todo)">
+          <span aria-hidden="true" >&times;</span>
+        </button>
+      </div>
+    </form>
+  </div>
